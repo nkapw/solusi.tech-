@@ -1,0 +1,56 @@
+---
+// src/components/Services.astro
+const services = [
+  {
+    title: 'Aplikasi Mobile',
+    icon: '📱',
+    description: 'Aplikasi iOS & Android native dan cross-platform menggunakan React Native atau Flutter. Dari MVP hingga produk skala enterprise.',
+  },
+  {
+    title: 'Website & Web App',
+    icon: '🌐',
+    description: 'Landing page berkecepatan tinggi, sistem manajemen konten, hingga aplikasi web kompleks dengan performa dan keamanan terbaik.',
+  },
+  {
+    title: 'Sistem IoT',
+    icon: '🔌',
+    description: 'Desain perangkat keras, firmware embedded (ESP32, Arduino), protokol MQTT, dan dashboard monitoring real-time untuk industri.',
+  },
+  {
+    title: 'AI & Machine Learning',
+    icon: '🤖',
+    description: 'Model prediktif, computer vision, NLP, dan rekomendasi yang diintegrasikan langsung ke dalam produk bisnis Anda.',
+  },
+];
+---
+<section id="layanan" aria-labelledby="layanan-heading">
+  <div class="container">
+    <h2 id="layanan-heading">Layanan Kami</h2>
+    <p class="section-sub">Empat bidang utama yang kami kuasai secara mendalam.</p>
+    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10" role="list">
+      {services.map(s => (
+        <li class="service-card">
+          <span class="icon" aria-hidden="true">{s.icon}</span>
+          <h3>{s.title}</h3>
+          <p>{s.description}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .section-sub { color: var(--subtext); margin-top: 0.5rem; }
+  .service-card {
+    border: 1px solid #e5e7eb;
+    padding: 1.5rem;
+    background: var(--bg);
+  }
+  .service-card .icon { font-size: 2rem; display: block; margin-bottom: 0.75rem; }
+  .service-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+  }
+  .service-card p { color: var(--subtext); font-size: 0.95rem; line-height: 1.6; }
+</style>
