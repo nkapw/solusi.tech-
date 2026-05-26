@@ -12,10 +12,10 @@ const steps = [
   <div class="container">
     <h2 id="proses-heading">Cara Kami Bekerja</h2>
     <p class="section-sub">Proses transparan dari hari pertama hingga produk berjalan lancar.</p>
-    <ol class="process-list mt-10" role="list">
+    <ol class="process-list mt-10">
       {steps.map((step, i) => (
         <li class="process-step">
-          <span class="step-num" aria-hidden="true">{i + 1}</span>
+          <span class="step-num">{i + 1}</span>
           <div>
             <h3>{step.title}</h3>
             <p>{step.body}</p>

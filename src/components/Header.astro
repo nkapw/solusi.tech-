@@ -40,8 +40,24 @@
   .cta-nav {
     border: 1px solid var(--accent);
     padding: 0.35rem 0.9rem;
-    color: var(--accent) !important;
+    color: var(--accent);
     font-weight: 600;
   }
-  .cta-nav:hover { background: var(--accent-light); text-decoration: none !important; }
+  .cta-nav:hover { background: var(--accent-light); text-decoration: none; }
+  @media (max-width: 640px) {
+    nav ul {
+      gap: 0.75rem;
+    }
+    .cta-nav {
+      display: none;
+    }
+    nav a {
+      font-size: 0.8rem;
+    }
+  }
+  @media (max-width: 480px) {
+    nav ul {
+      gap: 0.4rem;
+    }
+  }
 </style>

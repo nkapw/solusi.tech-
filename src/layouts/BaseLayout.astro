@@ -1,6 +1,7 @@
 ---
 // src/layouts/BaseLayout.astro
 import '../styles/global.css';
+import { faqData } from '../data/faq.ts';
 
 export interface Props {
   title?: string;
@@ -11,7 +12,7 @@ export interface Props {
 const {
   title = 'Solusi — Jasa Pembuatan Aplikasi, Website, IoT & AI Indonesia',
   description = 'Solusi adalah mitra teknologi terpercaya untuk UMKM, startup, dan enterprise Indonesia. Kami membangun aplikasi mobile, website, sistem IoT, dan solusi AI yang scalable.',
-  canonicalURL = 'https://solusi.id/',
+  canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : 'https://solusi.id/',
 } = Astro.props;
 
 const ogImage = 'https://solusi.id/og-image.png';
@@ -66,20 +67,10 @@ const jsonLdServices = services.map(s => ({
   "areaServed": "Indonesia"
 }));
 
-const faqItems = [
-  { q: "Berapa biaya pembuatan aplikasi?", a: "Biaya bergantung pada kompleksitas dan fitur yang dibutuhkan. Hubungi kami untuk estimasi gratis." },
-  { q: "Berapa lama waktu pengerjaan?", a: "Proyek sederhana 2–4 minggu, proyek kompleks 2–6 bulan. Kami tetapkan timeline realistis di awal." },
-  { q: "Teknologi apa yang digunakan?", a: "React, React Native, Node.js, Python, FastAPI, TensorFlow, PostgreSQL, MongoDB, ESP32, Docker, dan lainnya sesuai kebutuhan." },
-  { q: "Apakah ada garansi setelah launch?", a: "Ya, kami menyediakan masa garansi bug-fix minimal 30 hari setelah deployment." },
-  { q: "Bagaimana proses pembayaran?", a: "Biasanya DP 50% di awal, 50% setelah selesai. Bisa disesuaikan untuk proyek besar." },
-  { q: "Apakah ada NDA untuk kerahasiaan proyek?", a: "Ya, kami siap menandatangani NDA sebelum proyek dimulai." },
-  { q: "Berapa banyak revisi yang disertakan?", a: "Setiap tahap (desain dan development) mencakup 2 putaran revisi tanpa biaya tambahan." },
-];
-
 const jsonLdFAQ = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": faqItems.map(item => ({
+  "mainEntity": faqData.map(item => ({
     "@type": "Question",
     "name": item.q,
     "acceptedAnswer": { "@type": "Answer", "text": item.a }
