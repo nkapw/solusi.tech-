@@ -1,0 +1,64 @@
+---
+// src/components/Footer.astro
+const year = new Date().getFullYear();
+---
+<footer>
+  <div class="container grid grid-cols-1 md:grid-cols-3 gap-8 py-12">
+    <div>
+      <p class="logo">Solusi</p>
+      <p class="tagline">Solusi Digital End-to-End untuk Bisnis Modern</p>
+    </div>
+    <nav aria-label="Footer navigation">
+      <h3>Navigasi</h3>
+      <ul>
+        <li><a href="#layanan">Layanan</a></li>
+        <li><a href="#portofolio">Portofolio</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+    <address>
+      <h3>Kontak</h3>
+      <ul>
+        <li><a href="mailto:halo@solusi.id">halo@solusi.id</a></li>
+        <li><a href="https://wa.me/628123456789" rel="noopener noreferrer">+62 812-3456-7890</a></li>
+        <li>Jakarta, Indonesia</li>
+      </ul>
+    </address>
+  </div>
+  <div class="copyright">
+    <div class="container">
+      <small>© {year} Solusi. Hak cipta dilindungi.</small>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer { background: var(--text); color: #e5e7eb; }
+  .logo {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+  .tagline { font-size: 0.875rem; color: #9ca3af; line-height: 1.5; }
+  h3 {
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #9ca3af;
+    margin-bottom: 0.75rem;
+  }
+  ul { display: flex; flex-direction: column; gap: 0.5rem; }
+  a { color: #e5e7eb; text-decoration: none; font-size: 0.95rem; }
+  a:hover { color: #fff; text-decoration: underline; }
+  address { font-style: normal; }
+  address li { font-size: 0.95rem; color: #e5e7eb; }
+  .copyright {
+    border-top: 1px solid #374151;
+    padding-block: 1rem;
+  }
+  .copyright small { color: #6b7280; font-size: 0.85rem; }
+</style>
