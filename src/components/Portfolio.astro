@@ -1,0 +1,86 @@
+---
+// src/components/Portfolio.astro
+const projects = [
+  {
+    title: 'Sistem POS Warung',
+    category: 'Web App',
+    stack: 'React, Node.js, PostgreSQL',
+    description: 'Aplikasi kasir berbasis web untuk warung makan kecil-menengah, lengkap dengan laporan penjualan harian.',
+  },
+  {
+    title: 'Monitoring Greenhouse',
+    category: 'IoT',
+    stack: 'ESP32, MQTT, React Dashboard',
+    description: 'Sistem sensor suhu, kelembaban, dan cahaya untuk greenhouse pertanian urban dengan notifikasi otomatis.',
+  },
+  {
+    title: 'Deteksi Kualitas Produk',
+    category: 'AI / ML',
+    stack: 'Python, TensorFlow, FastAPI',
+    description: 'Computer vision untuk deteksi cacat produk di lini produksi manufaktur, akurasi 96.4%.',
+  },
+  {
+    title: 'Aplikasi Delivery UMKM',
+    category: 'Mobile',
+    stack: 'React Native, Firebase',
+    description: 'Aplikasi pesan-antar untuk jaringan warung lokal dengan fitur pelacakan kurir secara real-time.',
+  },
+  {
+    title: 'Platform E-Learning',
+    category: 'Web App',
+    stack: 'Astro, Supabase',
+    description: 'Platform kursus online dengan video streaming, kuis interaktif, dan sertifikat otomatis.',
+  },
+  {
+    title: 'Analitik Penjualan',
+    category: 'AI / ML',
+    stack: 'Python, Pandas, Plotly',
+    description: 'Dashboard prediksi tren penjualan berbasis machine learning untuk retailer multi-cabang.',
+  },
+];
+---
+<section id="portofolio" aria-labelledby="portofolio-heading">
+  <div class="container">
+    <h2 id="portofolio-heading">Portofolio</h2>
+    <p class="section-sub">Sejumlah proyek yang telah kami kerjakan.</p>
+    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10" role="list">
+      {projects.map(p => (
+        <li class="project-card">
+          <span class="badge">{p.category}</span>
+          <h3>{p.title}</h3>
+          <p>{p.description}</p>
+          <p class="stack"><small>{p.stack}</small></p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .section-sub { color: var(--subtext); margin-top: 0.5rem; }
+  .project-card {
+    border: 1px solid #e5e7eb;
+    padding: 1.5rem;
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .badge {
+    font-size: 0.75rem;
+    background: var(--accent-light);
+    color: var(--accent);
+    padding: 0.2rem 0.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    align-self: flex-start;
+  }
+  .project-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+  }
+  .project-card p { color: var(--subtext); font-size: 0.9rem; line-height: 1.6; }
+  .stack { margin-top: auto; padding-top: 0.5rem; border-top: 1px solid #e5e7eb; }
+  .stack small { color: var(--subtext); font-family: monospace; font-size: 0.8rem; }
+</style>
