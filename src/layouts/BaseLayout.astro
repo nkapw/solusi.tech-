@@ -1,0 +1,142 @@
+---
+// src/layouts/BaseLayout.astro
+import '../styles/global.css';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  canonicalURL?: string;
+}
+
+const {
+  title = 'Solusi — Jasa Pembuatan Aplikasi, Website, IoT & AI Indonesia',
+  description = 'Solusi adalah mitra teknologi terpercaya untuk UMKM, startup, dan enterprise Indonesia. Kami membangun aplikasi mobile, website, sistem IoT, dan solusi AI yang scalable.',
+  canonicalURL = 'https://solusi.id/',
+} = Astro.props;
+
+const ogImage = 'https://solusi.id/og-image.png';
+
+const jsonLdOrganization = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Solusi",
+  "url": "https://solusi.id",
+  "logo": "https://solusi.id/favicon.svg",
+  "email": "halo@solusi.id",
+  "telephone": "+628123456789",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Jakarta",
+    "addressCountry": "ID"
+  },
+  "sameAs": []
+};
+
+const jsonLdLocalBusiness = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Solusi",
+  "description": description,
+  "url": "https://solusi.id",
+  "telephone": "+628123456789",
+  "email": "halo@solusi.id",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Jakarta",
+    "addressRegion": "DKI Jakarta",
+    "addressCountry": "ID"
+  },
+  "areaServed": "Indonesia",
+  "priceRange": "$$"
+};
+
+const services = [
+  { name: "Pembuatan Aplikasi Mobile", description: "Aplikasi iOS & Android native/cross-platform dengan React Native atau Flutter." },
+  { name: "Pembuatan Website & Web App", description: "Dari landing page berkecepatan tinggi hingga sistem web kompleks." },
+  { name: "Sistem IoT", description: "Perangkat keras, firmware, dan dashboard monitoring real-time." },
+  { name: "Solusi AI & Machine Learning", description: "Model prediktif, computer vision, dan NLP untuk kebutuhan bisnis." },
+];
+
+const jsonLdServices = services.map(s => ({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": s.name,
+  "description": s.description,
+  "provider": { "@type": "Organization", "name": "Solusi", "url": "https://solusi.id" },
+  "areaServed": "Indonesia"
+}));
+
+const faqItems = [
+  { q: "Berapa biaya pembuatan aplikasi?", a: "Biaya bergantung pada kompleksitas dan fitur yang dibutuhkan. Hubungi kami untuk estimasi gratis." },
+  { q: "Berapa lama waktu pengerjaan?", a: "Proyek sederhana 2–4 minggu, proyek kompleks 2–6 bulan. Kami tetapkan timeline realistis di awal." },
+  { q: "Teknologi apa yang digunakan?", a: "React, React Native, Node.js, Python, FastAPI, TensorFlow, PostgreSQL, MongoDB, ESP32, Docker, dan lainnya sesuai kebutuhan." },
+  { q: "Apakah ada garansi setelah launch?", a: "Ya, kami menyediakan masa garansi bug-fix minimal 30 hari setelah deployment." },
+  { q: "Bagaimana proses pembayaran?", a: "Biasanya DP 50% di awal, 50% setelah selesai. Bisa disesuaikan untuk proyek besar." },
+  { q: "Apakah ada NDA untuk kerahasiaan proyek?", a: "Ya, kami siap menandatangani NDA sebelum proyek dimulai." },
+  { q: "Berapa banyak revisi yang disertakan?", a: "Setiap tahap (desain dan development) mencakup 2 putaran revisi tanpa biaya tambahan." },
+];
+
+const jsonLdFAQ = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(item => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": { "@type": "Answer", "text": item.a }
+  }))
+};
+
+const jsonLdBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://solusi.id/" }
+  ]
+};
+---
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary Meta -->
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="keywords" content="jasa pembuatan aplikasi, jasa pembuatan website, jasa IoT Indonesia, konsultan AI, developer aplikasi custom, software house Indonesia" />
+  <meta name="author" content="Solusi" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href={canonicalURL} />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:locale" content="id_ID" />
+  <meta property="og:site_name" content="Solusi" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- JSON-LD Schemas -->
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLdOrganization)} />
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLdLocalBusiness)} />
+  {jsonLdServices.map(s => (
+    <script type="application/ld+json" set:html={JSON.stringify(s)} />
+  ))}
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLdFAQ)} />
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLdBreadcrumb)} />
+</head>
+<body>
+  <slot />
+</body>
+</html>
