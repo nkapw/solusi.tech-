@@ -3,60 +3,74 @@
 ---
 <section id="hero" aria-labelledby="hero-heading">
   <div class="container">
-    <h1 id="hero-heading">Kami Bantu Bisnis Anda Tumbuh<br />dengan Teknologi</h1>
+    <p class="eyebrow">Software Development Studio</p>
+    <h1 id="hero-heading">Kami Bantu Bisnis Anda<br />Tumbuh dengan Teknologi</h1>
     <p class="lead">
-      Dari aplikasi mobile hingga sistem AI — Solusi hadir sebagai mitra teknis
-      jangka panjang untuk UMKM, startup, dan enterprise di Indonesia.
+      Dari aplikasi mobile hingga sistem AI — Solusi hadir sebagai
+      mitra teknis jangka panjang untuk UMKM, startup, dan enterprise.
     </p>
-    <div class="cta-group flex flex-wrap gap-4 mt-8">
+    <div class="actions flex flex-wrap gap-3 mt-10">
       <a href="#kontak" class="btn-primary">Mulai Konsultasi Gratis →</a>
-      <a href="#portofolio" class="btn-secondary">Lihat Portofolio</a>
+      <a href="#portofolio" class="btn-ghost">Lihat Portofolio</a>
     </div>
   </div>
 </section>
 
 <style>
   #hero {
-    padding-block: 6rem 5rem;
+    padding-block: 7rem 5rem;
     background: var(--bg);
   }
-  h1 {
-    font-size: clamp(1.75rem, 4vw, 2.75rem);
-    max-width: 22ch;
-    margin-bottom: 1.25rem;
-    font-weight: bold;
+
+  .eyebrow {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    margin-bottom: 1.5rem;
   }
+
+  h1 {
+    font-size: clamp(1.75rem, 4.5vw, 3rem);
+    max-width: 20ch;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+
   .lead {
-    font-size: 1rem;
+    font-size: 0.9375rem;
     color: var(--subtext);
-    max-width: 60ch;
+    max-width: 52ch;
     line-height: 1.9;
   }
-  /* CTA buttons — UI controls, not body links */
-  .btn-primary {
+
+  /* Buttons — UI controls (styled <a>) */
+  .btn-primary, .btn-ghost {
     display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    padding: 0.65rem 1.4rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+  }
+  .btn-primary {
     background: var(--text);
     color: var(--bg);
-    text-decoration: none;
-    padding: 0.6rem 1.25rem;
-    font-family: var(--font-body);
-    font-weight: bold;
-    font-size: 0.875rem;
-    letter-spacing: 0.02em;
   }
   .btn-primary:hover { background: var(--accent); }
-  .btn-secondary {
-    display: inline-block;
-    border: 1px solid var(--text);
+
+  .btn-ghost {
+    border: 1px solid var(--border);
     color: var(--text);
-    text-decoration: none;
-    padding: 0.6rem 1.25rem;
-    font-family: var(--font-body);
-    font-size: 0.875rem;
+    background: transparent;
   }
-  .btn-secondary:hover { background: var(--accent-light); }
+  .btn-ghost:hover { background: var(--surface); border-color: var(--text); }
+
   .btn-primary:focus-visible,
-  .btn-secondary:focus-visible {
+  .btn-ghost:focus-visible {
     outline: 2px solid var(--text);
     outline-offset: 3px;
   }

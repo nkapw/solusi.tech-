@@ -3,16 +3,21 @@
 ---
 <header>
   <div class="container flex items-center justify-between py-4">
-    <a href="/" aria-label="Solusi — Beranda" class="logo">Solusi</a>
+
+    <a href="/" class="logo" aria-label="Solusi — Beranda">Solusi</a>
+
     <nav aria-label="Navigasi utama">
-      <ul class="flex gap-6 items-center">
+      <ul class="flex items-center gap-8">
         <li><a href="#layanan">Layanan</a></li>
         <li><a href="#portofolio">Portofolio</a></li>
         <li><a href="#tentang">Tentang</a></li>
         <li><a href="#kontak">Kontak</a></li>
-        <li><a href="#kontak" class="cta-nav">Konsultasi</a></li>
+        <li>
+          <a href="#kontak" class="nav-cta">Konsultasi</a>
+        </li>
       </ul>
     </nav>
+
   </div>
 </header>
 
@@ -24,23 +29,52 @@
     background: var(--bg);
     border-bottom: 1px solid var(--border);
   }
+
+  /* Logo */
   .logo {
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
+    font-family: var(--font-mono);
+    font-size: 1rem;
     font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text);
+    text-decoration: none;
   }
-  nav { font-size: 0.875rem; }
-  .cta-nav {
-    border: 1px solid currentColor;
-    padding: 0.3rem 0.8rem;
-    font-weight: 600;
+
+  /* Nav links */
+  nav a {
+    font-size: 0.8rem;
+    color: var(--subtext);
+    letter-spacing: 0.03em;
   }
+  nav a:hover { color: var(--text); text-decoration: none; }
+
+  /* CTA pill */
+  nav .nav-cta {
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 0.35rem 0.9rem;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  nav .nav-cta:hover {
+    background: var(--text);
+    color: var(--bg);
+    border-color: var(--text);
+    text-decoration: none;
+  }
+
+  /* Mobile */
   @media (max-width: 640px) {
-    nav ul { gap: 0.75rem; }
-    .cta-nav { display: none; }
-    nav a { font-size: 0.8rem; }
+    nav ul { gap: 1rem; }
+    .nav-cta { display: none; }
+    nav a { font-size: 0.75rem; }
   }
-  @media (max-width: 480px) {
-    nav ul { gap: 0.4rem; }
+  @media (max-width: 420px) {
+    nav ul { gap: 0.6rem; }
+    nav a { font-size: 0.7rem; }
   }
 </style>
