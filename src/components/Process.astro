@@ -1,0 +1,62 @@
+---
+// src/components/Process.astro
+const steps = [
+  { title: 'Konsultasi', body: 'Kami pelajari kebutuhan bisnis, anggaran, dan timeline Anda. Gratis, tanpa komitmen.' },
+  { title: 'Desain', body: 'Wireframe dan prototipe interaktif untuk memvalidasi alur sebelum kode pertama ditulis.' },
+  { title: 'Development', body: 'Pengembangan iteratif dengan demo berkala. Anda selalu tahu progress terkini.' },
+  { title: 'Deployment', body: 'Peluncuran ke server produksi dengan monitoring penuh dan zero-downtime strategy.' },
+  { title: 'Maintenance', body: 'Update rutin, keamanan, performa, dan penambahan fitur sesuai pertumbuhan bisnis.' },
+];
+---
+<section id="proses" aria-labelledby="proses-heading">
+  <div class="container">
+    <h2 id="proses-heading">Cara Kami Bekerja</h2>
+    <p class="section-sub">Proses transparan dari hari pertama hingga produk berjalan lancar.</p>
+    <ol class="process-list mt-10" role="list">
+      {steps.map((step, i) => (
+        <li class="process-step">
+          <span class="step-num" aria-hidden="true">{i + 1}</span>
+          <div>
+            <h3>{step.title}</h3>
+            <p>{step.body}</p>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
+
+<style>
+  .section-sub { color: var(--subtext); margin-top: 0.5rem; }
+  .process-list { display: flex; flex-direction: column; gap: 2rem; }
+  .process-step {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  .step-num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    font-family: var(--font-heading);
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .process-step h3 {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    margin-bottom: 0.25rem;
+  }
+  .process-step p { color: var(--subtext); font-size: 0.95rem; }
+
+  @media (min-width: 768px) {
+    .process-list { flex-direction: row; }
+    .process-step { flex-direction: column; align-items: center; text-align: center; flex: 1; }
+    .process-step h3 { font-size: 1rem; }
+  }
+</style>
