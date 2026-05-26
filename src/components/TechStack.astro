@@ -1,0 +1,31 @@
+---
+// src/components/TechStack.astro
+const techs = [
+  'React', 'React Native', 'Node.js', 'Python', 'FastAPI',
+  'TensorFlow', 'PostgreSQL', 'MongoDB', 'ESP32', 'MQTT',
+  'Docker', 'Vercel', 'Supabase', 'Flutter', 'TypeScript',
+];
+---
+<section id="teknologi" aria-labelledby="teknologi-heading">
+  <div class="container">
+    <h2 id="teknologi-heading">Teknologi yang Kami Gunakan</h2>
+    <p class="section-sub">Stack yang telah teruji di proyek nyata.</p>
+    <ul class="tech-list flex flex-wrap gap-3 mt-8" role="list">
+      {techs.map(t => (
+        <li class="tech-tag">{t}</li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .section-sub { color: var(--subtext); margin-top: 0.5rem; }
+  .tech-tag {
+    border: 1px solid #d1d5db;
+    padding: 0.4rem 1rem;
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: var(--text);
+    background: var(--bg);
+  }
+</style>
