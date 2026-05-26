@@ -1,0 +1,47 @@
+---
+// src/components/Header.astro
+---
+<header>
+  <div class="container flex items-center justify-between py-4">
+    <a href="/" aria-label="Solusi — Beranda" class="logo">Solusi</a>
+    <nav aria-label="Navigasi utama">
+      <ul class="flex gap-6 items-center">
+        <li><a href="#layanan">Layanan</a></li>
+        <li><a href="#portofolio">Portofolio</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+        <li><a href="#kontak" class="cta-nav">Konsultasi</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--bg);
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent);
+    text-decoration: none;
+  }
+  nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  nav a:hover { color: var(--accent); text-decoration: underline; }
+  .cta-nav {
+    border: 1px solid var(--accent);
+    padding: 0.35rem 0.9rem;
+    color: var(--accent) !important;
+    font-weight: 600;
+  }
+  .cta-nav:hover { background: var(--accent-light); text-decoration: none !important; }
+</style>
