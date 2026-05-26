@@ -22,7 +22,7 @@
 
 <style>
   .cta-section { background: var(--accent-light); }
-  h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); margin-bottom: 1rem; }
+  h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); margin-bottom: 1rem; color: var(--text); }
   p { color: var(--subtext); max-width: 55ch; line-height: 1.7; }
   .btn-primary {
     display: inline-block;
@@ -32,7 +32,7 @@
     padding: 0.75rem 1.5rem;
     font-weight: 600;
   }
-  .btn-primary:hover { background: #334155; }
+  .btn-primary:hover { background: #334155; } /* slate-700, darkens --accent */
   .btn-secondary {
     display: inline-block;
     border: 1px solid var(--accent);
@@ -41,6 +41,11 @@
     padding: 0.75rem 1.5rem;
   }
   .btn-secondary:hover { background: #e2e8f0; }
+  .btn-primary:focus-visible,
+  .btn-secondary:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
   .note { margin-top: 2rem; }
   .note small { color: var(--subtext); }
 </style>
