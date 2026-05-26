@@ -1,0 +1,43 @@
+---
+// src/components/WhyUs.astro
+const advantages = [
+  {
+    title: 'Pengalaman Lintas Industri',
+    body: 'Sudah menangani proyek dari sektor retail, logistik, kesehatan, hingga manufaktur. Kami membawa perspektif domain yang memperkaya solusi teknis.',
+  },
+  {
+    title: 'Teknologi Terkini, Kode Bersih',
+    body: 'Arsitektur modern, konvensi kode yang konsisten, dokumentasi rapi. Hasil kerja kami mudah dilanjutkan oleh tim internal Anda.',
+  },
+  {
+    title: 'Support Pasca-Launch',
+    body: 'Komitmen kami tidak berakhir di deployment. Kami kawal produk hingga stabil di tangan pengguna nyata, termasuk monitoring dan hotfix.',
+  },
+];
+---
+<section id="tentang" aria-labelledby="tentang-heading">
+  <div class="container">
+    <h2 id="tentang-heading">Mengapa Solusi?</h2>
+    <p class="section-sub">Tiga komitmen yang membedakan kami dari vendor biasa.</p>
+    <ul class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10" role="list">
+      {advantages.map(a => (
+        <li>
+          <h3>{a.title}</h3>
+          <p>{a.body}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .section-sub { color: var(--subtext); margin-top: 0.5rem; }
+  li h3 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    border-left: 3px solid var(--accent);
+    padding-left: 0.75rem;
+  }
+  li p { color: var(--subtext); font-size: 0.95rem; line-height: 1.65; }
+</style>
