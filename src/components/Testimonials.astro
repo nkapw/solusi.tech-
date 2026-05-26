@@ -1,0 +1,57 @@
+---
+// src/components/Testimonials.astro
+const testimonials = [
+  {
+    quote: 'Tim Solusi memahami kebutuhan kami sejak hari pertama. Mereka tidak hanya menulis kode — mereka benar-benar memikirkan bisnis kami.',
+    name: 'Budi Santoso',
+    role: 'CEO, WarungKita',
+  },
+  {
+    quote: 'Kode yang mereka tulis bersih dan mudah kami lanjutkan sendiri. Dokumentasinya lengkap, onboarding developer baru jadi jauh lebih cepat.',
+    name: 'Rina Kusuma',
+    role: 'CTO, StartupLogistik',
+  },
+  {
+    quote: 'Aplikasi kami selesai tepat waktu dan sesuai anggaran. Yang paling berkesan: mereka tetap responsif bahkan setelah proyek selesai.',
+    name: 'Hendra Wijaya',
+    role: 'Pemilik, Toko Hijau',
+  },
+];
+---
+<section id="testimoni" aria-labelledby="testimoni-heading">
+  <div class="container">
+    <h2 id="testimoni-heading">Kata Klien Kami</h2>
+    <ul class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10" role="list">
+      {testimonials.map(t => (
+        <li>
+          <blockquote>
+            <p>"{t.quote}"</p>
+            <footer>
+              <cite>
+                <strong>{t.name}</strong><br />
+                <small>{t.role}</small>
+              </cite>
+            </footer>
+          </blockquote>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  blockquote {
+    border-left: 3px solid var(--accent);
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  blockquote p {
+    color: var(--text);
+    font-style: italic;
+    line-height: 1.7;
+  }
+  blockquote footer { color: var(--subtext); }
+  blockquote strong { color: var(--text); font-style: normal; }
+</style>
