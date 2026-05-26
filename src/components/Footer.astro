@@ -34,31 +34,32 @@ const year = new Date().getFullYear();
 </footer>
 
 <style>
-  footer { background: var(--text); color: #e5e7eb; }
+  footer {
+    background: var(--accent-light);
+    border-top: 1px solid var(--border);
+  }
   .logo {
     font-family: var(--font-heading);
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     font-weight: bold;
-    color: #fff;
-    margin-bottom: 0.5rem;
+    color: var(--text);
+    margin-bottom: 0.4rem;
   }
-  .tagline { font-size: 0.875rem; color: #9ca3af; line-height: 1.5; }
+  .tagline { font-size: 0.8rem; color: var(--subtext); line-height: 1.6; }
   h3 {
     font-family: var(--font-heading);
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: #9ca3af;
+    letter-spacing: 0.1em;
+    color: var(--subtext);
     margin-bottom: 0.75rem;
   }
-  ul { display: flex; flex-direction: column; gap: 0.5rem; }
-  a { color: #e5e7eb; font-size: 0.95rem; }
-  a:hover { color: #fff; }
+  ul { display: flex; flex-direction: column; gap: 0.4rem; }
   address { font-style: normal; }
-  address li { font-size: 0.95rem; color: #e5e7eb; }
+  address li { font-size: 0.875rem; color: var(--text); }
   .copyright {
-    border-top: 1px solid #374151;
+    border-top: 1px solid var(--border);
     padding-block: 1rem;
   }
-  .copyright small { color: #6b7280; font-size: 0.85rem; }
+  .copyright small { color: var(--subtext); font-size: 0.8rem; }
 </style>

@@ -22,42 +22,25 @@
     top: 0;
     z-index: 100;
     background: var(--bg);
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid var(--border);
   }
   .logo {
     font-family: var(--font-heading);
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: bold;
-    color: var(--accent);
-    text-decoration: none;
   }
-  nav a {
-    color: var(--text);
-    font-size: 0.95rem;
-  }
-  nav a:hover { color: var(--accent); }
+  nav { font-size: 0.875rem; }
   .cta-nav {
-    border: 1px solid var(--accent);
-    padding: 0.35rem 0.9rem;
-    color: var(--accent);
+    border: 1px solid currentColor;
+    padding: 0.3rem 0.8rem;
     font-weight: 600;
   }
-  .cta-nav { text-decoration: none; }
-  .cta-nav:hover { background: var(--accent-light); }
   @media (max-width: 640px) {
-    nav ul {
-      gap: 0.75rem;
-    }
-    .cta-nav {
-      display: none;
-    }
-    nav a {
-      font-size: 0.8rem;
-    }
+    nav ul { gap: 0.75rem; }
+    .cta-nav { display: none; }
+    nav a { font-size: 0.8rem; }
   }
   @media (max-width: 480px) {
-    nav ul {
-      gap: 0.4rem;
-    }
+    nav ul { gap: 0.4rem; }
   }
 </style>
