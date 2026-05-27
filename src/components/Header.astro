@@ -4,7 +4,9 @@
 <header>
   <div class="container flex items-center justify-between py-4">
 
-    <a href="/" class="logo" aria-label="Nyiroro — Beranda">Nyiroro</a>
+    <a href="/" class="logo" aria-label="Nyiroro — Beranda">
+      <img src="/logo.png" alt="Nyiroro" width="40" height="40" />
+    </a>
 
     <div class="right-controls flex items-center gap-4">
 
@@ -91,13 +93,15 @@
 
   /* Logo */
   .logo {
-    font-family: var(--font-mono);
-    font-size: 1rem;
-    font-weight: bold;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--text);
+    display: flex;
+    align-items: center;
     text-decoration: none;
+    line-height: 1;
+  }
+  .logo img {
+    display: block;
+    height: 40px;
+    width: auto;
   }
 
   /* Desktop nav links */
