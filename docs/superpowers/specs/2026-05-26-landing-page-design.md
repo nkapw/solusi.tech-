@@ -1,4 +1,4 @@
-# Desain: Landing Page Solusi
+# Desain: Landing Page Nyiroro
 
 **Tanggal:** 2026-05-26  
 **Status:** Disetujui  
@@ -8,7 +8,7 @@
 
 ## 1. Konteks & Tujuan
 
-Membangun landing page profesional untuk **Solusi**, bisnis jasa pengembangan software yang menyasar UMKM, startup, dan enterprise di Indonesia. Website berfungsi sebagai pintu masuk utama untuk lead generation (konsultasi gratis) dan membangun kepercayaan calon klien.
+Membangun landing page profesional untuk **Nyiroro**, bisnis jasa pengembangan software yang menyasar UMKM, startup, dan enterprise di Indonesia. Website berfungsi sebagai pintu masuk utama untuk lead generation (konsultasi gratis) dan membangun kepercayaan calon klien.
 
 **Tagline:** Solusi Digital End-to-End untuk Bisnis Modern
 
@@ -104,7 +104,7 @@ Tidak menggunakan: `bg-*`, `text-*`, `shadow-*`, `rounded-*` (kecuali netral sep
 ## 5. Konten Per Section
 
 ### 5.1 Header
-- Logo: teks "Solusi" (Georgia, bold, aksen abu slate)
+- Logo: teks "Nyiroro" (Georgia, bold, aksen abu slate)
 - Nav: `Layanan | Portofolio | Tentang | Kontak`
 - CTA kecil: tombol "Konsultasi" di ujung kanan
 - Perilaku: sticky, background putih solid saat scroll
@@ -112,7 +112,7 @@ Tidak menggunakan: `bg-*`, `text-*`, `shadow-*`, `rounded-*` (kecuali netral sep
 ### 5.2 Hero
 ```
 H1: "Kami Bantu Bisnis Anda Tumbuh dengan Teknologi"
-P:  "Dari aplikasi mobile hingga sistem AI — Solusi hadir sebagai
+P:  "Dari aplikasi mobile hingga sistem AI — Nyiroro hadir sebagai
      mitra teknis jangka panjang untuk UMKM, startup, dan enterprise."
 CTA primer:    [Mulai Konsultasi Gratis →]
 CTA sekunder:  [Lihat Portofolio]
@@ -128,7 +128,7 @@ CTA sekunder:  [Lihat Portofolio]
 
 Grid: 1 kolom (mobile) → 2 kolom (tablet) → 4 kolom (desktop)
 
-### 5.4 Mengapa Solusi (3 keunggulan)
+### 5.4 Mengapa Nyiroro (3 keunggulan)
 1. **Pengalaman Lintas Industri** — Sudah menangani proyek dari retail, logistik, kesehatan, hingga manufaktur
 2. **Teknologi Terkini, Kode Bersih** — Arsitektur modern, dokumentasi rapi, handover mudah
 3. **Support Pasca-Launch** — Tidak selesai di deployment; kami kawal hingga produk stabil di tangan pengguna
@@ -153,7 +153,7 @@ Ditampilkan sebagai `<ol>` dengan counter CSS, bukan library eksternal.
 React · React Native · Node.js · Python · FastAPI · TensorFlow · PostgreSQL · MongoDB · ESP32 · MQTT · Docker · Vercel · Supabase
 
 ### 5.8 Testimoni (3 dummy)
-1. **Budi Santoso** — CEO, WarungKita — *"Tim Solusi memahami kebutuhan kami sejak hari pertama..."*
+1. **Budi Santoso** — CEO, WarungKita — *"Tim Nyiroro memahami kebutuhan kami sejak hari pertama..."*
 2. **Rina Kusuma** — CTO, StartupLogistik — *"Kode yang mereka tulis bersih dan mudah kami lanjutkan sendiri..."*
 3. **Hendra Wijaya** — Pemilik, Toko Hijau — *"Aplikasi kami selesai tepat waktu dan sesuai anggaran..."*
 
@@ -183,7 +183,7 @@ CTA: [Hubungi Kami Sekarang →]
 - Tengah: Navigasi (Layanan, Portofolio, Tentang, Kontak)
 - Kanan: Email dummy, WhatsApp dummy, kota (Jakarta)
 
-Copyright: `© 2025 Solusi. Hak cipta dilindungi.`
+Copyright: `© 2025 Nyiroro. Hak cipta dilindungi.`
 
 ---
 
@@ -191,21 +191,21 @@ Copyright: `© 2025 Solusi. Hak cipta dilindungi.`
 
 ### 6.1 Meta Tags
 ```html
-<title>Solusi — Jasa Pembuatan Aplikasi, Website, IoT & AI Indonesia</title>
-<meta name="description" content="Solusi adalah mitra teknologi terpercaya untuk UMKM, startup, dan enterprise Indonesia. Kami membangun aplikasi mobile, website, sistem IoT, dan solusi AI yang scalable.">
+<title>Nyiroro — Jasa Pembuatan Aplikasi, Website, IoT & AI Indonesia</title>
+<meta name="description" content="Nyiroro adalah mitra teknologi terpercaya untuk UMKM, startup, dan enterprise Indonesia. Kami membangun aplikasi mobile, website, sistem IoT, dan solusi AI yang scalable.">
 <meta name="keywords" content="jasa pembuatan aplikasi, jasa pembuatan website, jasa IoT Indonesia, konsultan AI, developer aplikasi custom, software house Indonesia">
-<meta name="author" content="Solusi">
+<meta name="author" content="Nyiroro">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://solusi.id/">
+<link rel="canonical" href="https://nyiroro.id/">
 ```
 
 ### 6.2 Open Graph & Twitter Cards
 ```html
 <meta property="og:type" content="website">
-<meta property="og:title" content="Solusi — Jasa Pembuatan Aplikasi & Software Indonesia">
+<meta property="og:title" content="Nyiroro — Jasa Pembuatan Aplikasi & Software Indonesia">
 <meta property="og:description" content="...">
-<meta property="og:url" content="https://solusi.id/">
-<meta property="og:image" content="https://solusi.id/og-image.png">
+<meta property="og:url" content="https://nyiroro.id/">
+<meta property="og:image" content="https://nyiroro.id/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 ```
 
@@ -232,10 +232,10 @@ Copyright: `© 2025 Solusi. Hak cipta dilindungi.`
 
 | Field | Nilai Dummy |
 |---|---|
-| Email | halo@solusi.id |
+| Email | halo@nyiroro.id |
 | WhatsApp | +62 812-3456-7890 |
 | Kota | Jakarta, Indonesia |
-| Domain | https://solusi.id |
+| Domain | https://nyiroro.id |
 
 ---
 
