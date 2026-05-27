@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
-  site: 'https://solusi.id',
+  site: 'https://nyiroro.id',
   integrations: [
     sitemap(),
     tailwind({ applyBaseStyles: false }),

@@ -10,20 +10,20 @@ export interface Props {
 }
 
 const {
-  title = 'Solusi — Jasa Pembuatan Aplikasi, Website, IoT & AI Indonesia',
-  description = 'Solusi adalah mitra teknologi terpercaya untuk UMKM, startup, dan enterprise Indonesia. Kami membangun aplikasi mobile, website, sistem IoT, dan solusi AI yang scalable.',
-  canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : 'https://solusi.id/',
+  title = 'Nyiroro — Jasa Pembuatan Aplikasi, Website, IoT & AI Indonesia',
+  description = 'Nyiroro adalah mitra teknologi terpercaya untuk UMKM, startup, dan enterprise Indonesia. Kami membangun aplikasi mobile, website, sistem IoT, dan solusi AI yang scalable.',
+  canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : 'https://nyiroro.id/',
 } = Astro.props;
 
-const ogImage = 'https://solusi.id/og-image.png';
+const ogImage = 'https://nyiroro.id/og-image.png';
 
 const jsonLdOrganization = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Solusi",
-  "url": "https://solusi.id",
-  "logo": "https://solusi.id/favicon.svg",
-  "email": "halo@solusi.id",
+  "name": "Nyiroro",
+  "url": "https://nyiroro.id",
+  "logo": "https://nyiroro.id/favicon.svg",
+  "email": "halo@nyiroro.id",
   "telephone": "+628123456789",
   "address": {
     "@type": "PostalAddress",
@@ -36,11 +36,11 @@ const jsonLdOrganization = {
 const jsonLdLocalBusiness = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Solusi",
+  "name": "Nyiroro",
   "description": description,
-  "url": "https://solusi.id",
+  "url": "https://nyiroro.id",
   "telephone": "+628123456789",
-  "email": "halo@solusi.id",
+  "email": "halo@nyiroro.id",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Jakarta",
@@ -55,7 +55,7 @@ const services = [
   { name: "Pembuatan Aplikasi Mobile", description: "Aplikasi iOS & Android native/cross-platform dengan React Native atau Flutter." },
   { name: "Pembuatan Website & Web App", description: "Dari landing page berkecepatan tinggi hingga sistem web kompleks." },
   { name: "Sistem IoT", description: "Perangkat keras, firmware, dan dashboard monitoring real-time." },
-  { name: "Solusi AI & Machine Learning", description: "Model prediktif, computer vision, dan NLP untuk kebutuhan bisnis." },
+  { name: "AI & Machine Learning", description: "Model prediktif, computer vision, dan NLP untuk kebutuhan bisnis." },
 ];
 
 const jsonLdServices = services.map(s => ({
@@ -63,7 +63,7 @@ const jsonLdServices = services.map(s => ({
   "@type": "Service",
   "name": s.name,
   "description": s.description,
-  "provider": { "@type": "Organization", "name": "Solusi", "url": "https://solusi.id" },
+  "provider": { "@type": "Organization", "name": "Nyiroro", "url": "https://nyiroro.id" },
   "areaServed": "Indonesia"
 }));
 
@@ -81,7 +81,7 @@ const jsonLdBreadcrumb = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://solusi.id/" }
+    { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://nyiroro.id/" }
   ]
 };
 ---
@@ -106,7 +106,7 @@ const jsonLdBreadcrumb = {
   <title>{title}</title>
   <meta name="description" content={description} />
   <meta name="keywords" content="jasa pembuatan aplikasi, jasa pembuatan website, jasa IoT Indonesia, konsultan AI, developer aplikasi custom, software house Indonesia" />
-  <meta name="author" content="Solusi" />
+  <meta name="author" content="Nyiroro" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href={canonicalURL} />
 
@@ -117,7 +117,7 @@ const jsonLdBreadcrumb = {
   <meta property="og:url" content={canonicalURL} />
   <meta property="og:image" content={ogImage} />
   <meta property="og:locale" content="id_ID" />
-  <meta property="og:site_name" content="Solusi" />
+  <meta property="og:site_name" content="Nyiroro" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />

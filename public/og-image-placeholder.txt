@@ -1,2 +1,2 @@
 Replace this with og-image.png (1200x630px) before launch.
-The og:image meta tag in BaseLayout.astro references https://solusi.id/og-image.png
+The og:image meta tag in BaseLayout.astro references https://nyiroro.id/og-image.png
