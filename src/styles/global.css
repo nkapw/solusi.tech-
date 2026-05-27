@@ -30,6 +30,18 @@ ul, ol { list-style: none; }
   --px:    1.5rem;
 }
 
+/* ── Dark Mode (Charcoal) ───────────────────────────── */
+[data-theme="dark"] {
+  --bg:           #1a1a1a;
+  --surface:      #242424;
+  --text:         #e8e6e1;
+  --subtext:      #9a9893;
+  --muted:        #6b6b67;
+  --border:       #333333;
+  --accent:       #c9c9c4;
+  --accent-light: #242424;
+}
+
 /* ── Base ───────────────────────────────────────────── */
 html { scroll-behavior: smooth; }
 
@@ -39,6 +51,7 @@ body {
   background: var(--bg);
   line-height: 1.8;
   font-size: 0.9375rem;        /* 15px — comfortable for mono */
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 h1, h2, h3, h4 {
