@@ -10,13 +10,13 @@ ul, ol { list-style: none; }
 
 /* ── Design Tokens ──────────────────────────────────── */
 :root {
-  --bg:           #ffffff;
-  --surface:      #f6f6f6;
-  --text:         #111111;
-  --subtext:      #666666;
-  --muted:        #999999;
-  --border:       #dedede;
-  --accent:       #2d2d2d;
+  --bg:           #fafaf8;
+  --surface:      #f4f3ef;
+  --text:         #1a1a18;
+  --subtext:      #6b6b67;
+  --muted:        #9b9b97;
+  --border:       #e2e0da;
+  --accent:       #8b6914;
 
   --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro',
                Menlo, Consolas, 'Courier New', monospace;
